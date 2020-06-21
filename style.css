@@ -5,6 +5,8 @@ border-color: rgb(218, 218, 233);
 padding: .3em;
 text-align: center;
 background-color: white;
+margin: 1rem;  
+
 }
 
 .container{
@@ -22,14 +24,16 @@ background-color: white;
 }
 
 body{
-margin: 12px;
   font-size: 100%;
   font-family: 'Open Sans', sans-serif;
   color: white;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(24, 21, 228, 0.541) 0%, rgb(12, 159, 245) 100%);
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden;
+  /* background: linear-gradient(to bottom, rgba(24, 21, 228, 0.541) 0%, rgb(12, 159, 245) 100%); */
+  background-image: url("124344-miui-8-weather-background-minimal-hd.png");
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
 .location{
@@ -76,5 +80,6 @@ font-size: x-large;
     transform: scale(1.5); 
   }
 
+  
 
 
