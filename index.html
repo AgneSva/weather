@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <img id="searchIcon" src="search--v2.png">
+        <input type="text" autocomplete="off" id="search-box" class="hide inputdata" placeholder="Input the city...">
+        <button id="submit" class="hide">Search</button>
+    </header>
+    <div class="container">
+
+        <main>
+            <section class="location">
+                <h1 id="city"></h1>
+                <h2 id="date"></h2>
+            </section>
+
+            <img id="icon" src="windy-weather.png"> 
+
+            <div class="current">
+                <div id="temp"></div>
+                <div id="weather"></div>
+
+            </div>
+
+
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
