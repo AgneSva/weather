@@ -36,10 +36,10 @@ submitBtn.addEventListener('click', function () {
 
             d = new Date();
             var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-           
+
 
             city.innerHTML = nameValue;
-            date.innerHTML =  months[d.getMonth()] + " " + d.getDate() + "th " + d.getFullYear();
+            date.innerHTML = months[d.getMonth()] + " " + d.getDate() + "th " + d.getFullYear();
             description.innerHTML = descValue;
             temp.innerHTML = tempValue + " °C";
             searchBox.value = "";
@@ -55,66 +55,48 @@ submitBtn.addEventListener('click', function () {
 
 //get info for london
 fetch('https://api.openweathermap.org/data/2.5/weather?q=london&appid=6d2e15bc6c37daf2c82cb24bf5f5fde8')
-        .then(response => response.json())
-        .then(data => {
-            let tempLNvalue = data['main']['temp'];
-            var iconLNid = data['weather'][0]['icon'];
+    .then(response => response.json())
+    .then(data => {
+        let tempLNvalue = data['main']['temp'];
+        var iconLNid = data['weather'][0]['icon'];
 
-            tempLNvalue -= 273.15
-            tempLNvalue = Math.round(tempLNvalue)
+        tempLNvalue -= 273.15
+        tempLNvalue = Math.round(tempLNvalue)
+        tempLN.innerHTML = tempLNvalue + " °C";
+        var iconUrl = "http://openweathermap.org/img/wn/" + iconLNid + "@2x.png";
+        document.getElementById("iconLN").src = iconUrl;
 
+    })
 
-          
-            tempLN.innerHTML = tempLNvalue + " °C";
-         
-
-
-
-            var iconUrl = "http://openweathermap.org/img/wn/" + iconLNid + "@2x.png";
-            document.getElementById("iconLN").src = iconUrl;
-
-        })
 //get info for moscow
-        fetch('https://api.openweathermap.org/data/2.5/weather?q=moscow&appid=6d2e15bc6c37daf2c82cb24bf5f5fde8')
-        .then(response => response.json())
-        .then(data => {
-            let tempMSvalue = data['main']['temp'];
-            var iconMSid = data['weather'][0]['icon'];
+fetch('https://api.openweathermap.org/data/2.5/weather?q=moscow&appid=6d2e15bc6c37daf2c82cb24bf5f5fde8')
+    .then(response => response.json())
+    .then(data => {
+        let tempMSvalue = data['main']['temp'];
+        var iconMSid = data['weather'][0]['icon'];
 
-            tempMSvalue -= 273.15
-            tempMSvalue = Math.round(tempMSvalue)
+        tempMSvalue -= 273.15
+        tempMSvalue = Math.round(tempMSvalue)
+        tempMS.innerHTML = tempMSvalue + " °C";
+        var iconUrl = "http://openweathermap.org/img/wn/" + iconMSid + "@2x.png";
+        document.getElementById("iconMS").src = iconUrl;
 
+    })
 
-          
-            tempMS.innerHTML = tempMSvalue + " °C";
-         
-
-
-
-            var iconUrl = "http://openweathermap.org/img/wn/" + iconMSid + "@2x.png";
-            document.getElementById("iconMS").src = iconUrl;
-
-        })
 
 //get info for new york
-        fetch('https://api.openweathermap.org/data/2.5/weather?q=new&york&appid=6d2e15bc6c37daf2c82cb24bf5f5fde8')
-        .then(response => response.json())
-        .then(data => {
-            let tempNYvalue = data['main']['temp'];
-            var iconNYid = data['weather'][0]['icon'];
+fetch('https://api.openweathermap.org/data/2.5/weather?q=new&york&appid=6d2e15bc6c37daf2c82cb24bf5f5fde8')
+    .then(response => response.json())
+    .then(data => {
+        let tempNYvalue = data['main']['temp'];
+        var iconNYid = data['weather'][0]['icon'];
 
-            tempNYvalue -= 273.15
-            tempNYvalue = Math.round(tempNYvalue)
+        tempNYvalue -= 273.15
+        tempNYvalue = Math.round(tempNYvalue)
 
+        tempNY.innerHTML = tempNYvalue + " °C";
+        var iconUrl = "http://openweathermap.org/img/wn/" + iconNYid + "@2x.png";
+        document.getElementById("iconNY").src = iconUrl;
 
-          
-            tempNY.innerHTML = tempNYvalue + " °C";
-         
-
-
-
-            var iconUrl = "http://openweathermap.org/img/wn/" + iconNYid + "@2x.png";
-            document.getElementById("iconNY").src = iconUrl;
-
-        })
+    })
 

@@ -17,7 +17,7 @@ margin: 0.5em;
     
      font-size: 1.1em;
      height:100vh; width:100%;
-      margin:  auto;
+
     display: flex;
   flex-direction: column;
   background-color: transparent;
@@ -83,8 +83,8 @@ line-height: 5vmin;
 }
 
 #searchIcon:hover {
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    -ms-transform: scale(1.5); 
+    -webkit-transform: scale(1.5); 
     transform: scale(1.5); 
   }
 
@@ -111,8 +111,8 @@ padding: 1cm;
 }
 
 @media screen and (max-width: 700px) {
-  .rec, .container, 
-  #search-box, #submit{   
+  .rec{   
+  
     flex-direction: column;
   }}
 
