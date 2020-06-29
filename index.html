@@ -15,10 +15,25 @@
         <img id="searchIcon" src="search--v2.png">
         <input type="text" autocomplete="off" id="search-box" class="hide inputdata" placeholder="Input the city...">
         <button id="submit" class="hide">Search</button>
+         <div id="plus">+ ADD CITY TO YOUR LIST</div>
     </header>
+   
+<div id="sideBar"> 
+    <h2> YOUR CITIES</h2>
+    <div class="toggle-btn" onclick="toggleSideBar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+<ul id = "myList">
+  
+</ul>
+</div>
+
+
     <div class="container">
 
-        <main>
+    
             <section class="location">
                 <h1 id="city"></h1>
                 <br>
@@ -34,7 +49,7 @@
             </div>
 
             <div class="rec">
-                <div>New York
+                <div id="NY">New York
                     <img id="iconNY" src="">
                     <div id="tempNY">temp</div>
                 </div>
@@ -49,7 +64,7 @@
             </div>
 
 
-        </main>
+    
     </div>
     <script src="app.js"></script>
 </body>

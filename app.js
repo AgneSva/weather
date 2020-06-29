@@ -5,15 +5,18 @@ var description = document.getElementById('weather')
 var city = document.getElementById('city')
 var temp = document.getElementById('temp')
 var date = document.getElementById('date')
+var plus = document.getElementById('plus')
 
 //recommendations:
 var tempLN = document.getElementById('tempLN')
 var tempMS = document.getElementById('tempMS')
 var tempNY = document.getElementById('tempNY')
 
+var cityList= [];
 
-
-
+function toggleSideBar(){
+    document.getElementById("sideBar").classList.toggle('active');
+}
 
 searchIcon.addEventListener('click', () => {
     searchIcon.classList.add("hide")
@@ -99,4 +102,17 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=new&york&appid=6d2e15bc
         document.getElementById("iconNY").src = iconUrl;
 
     })
+
+plus.addEventListener('click', () => {
+//add to array of cities
+cityList[cityList.length]=city.innerHTML;
+
+
+// add to html new city
+var newLi = document.createElement("li");
+
+newLi.innerHTML = cityList[cityList.length-1];
+
+document.getElementById("myList").appendChild(newLi)
+})
 

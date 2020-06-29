@@ -83,9 +83,9 @@ line-height: 5vmin;
 }
 
 #searchIcon:hover {
-    -ms-transform: scale(1.5); 
-    -webkit-transform: scale(1.5); 
-    transform: scale(1.5); 
+    -ms-transform: scale(1.2); 
+    -webkit-transform: scale(1.2); 
+    transform: scale(1.2); 
   }
 
   
@@ -110,11 +110,68 @@ padding: 1cm;
 
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 568px) {
   .rec{   
-  
     flex-direction: column;
-  }}
+  }
+  header, .container{
+    display: inline-block;
+  }
+}
 
 
- 
+ #plus{
+   position: relative;
+   top: 5px;
+   left: 10px;
+   font-size: large;
+  
+ }
+
+ #plus:hover{
+color: black;
+ }
+
+ #sideBar{
+   color: black;
+position: fixed;
+width: 200px;
+height: 100%;
+background-color: white;
+top: 0;
+right: -200px;
+transition: all 500ms linear ;
+ }
+
+ #sideBar.active{
+right: 0px;
+ }
+
+ #sideBar h2{
+   padding: 5px;
+   margin: 5px;
+ }
+
+ #sideBar ul li{
+   color: black;
+list-style: none;
+padding: 15px 10px;
+
+ }
+
+ #sideBar .toggle-btn{
+   position: absolute;
+   right: 230px;
+   top: 20px;
+
+ }
+
+ #sideBar .toggle-btn span{
+display: block;
+width: 30px;
+height: 5px;
+background-color: white;
+margin: 5px 0px;
+
+ }
+
