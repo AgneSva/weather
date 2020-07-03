@@ -18,6 +18,7 @@ function toggleSideBar(){
     document.getElementById("sideBar").classList.toggle('active');
 }
 
+
 searchIcon.addEventListener('click', () => {
     searchIcon.classList.add("hide")
     searchBox.classList.remove("hide")
@@ -28,10 +29,14 @@ submitBtn.addEventListener('click', function () {
     fetch('https://api.openweathermap.org/data/2.5/weather?q=' + searchBox.value + '&appid=6d2e15bc6c37daf2c82cb24bf5f5fde8')
         .then(response => response.json())
         .then(data => {
+            city.innerHTML = "";
+
+
             let tempValue = data['main']['temp'];
             var nameValue = data['name'];
             var descValue = data['weather'][0]['description'];
             var iconID = data['weather'][0]['icon'];
+
 
             tempValue -= 273.15
             tempValue = Math.round(tempValue)
@@ -114,5 +119,10 @@ var newLi = document.createElement("li");
 newLi.innerHTML = cityList[cityList.length-1];
 
 document.getElementById("myList").appendChild(newLi)
+
+
+
 })
+
+
 
